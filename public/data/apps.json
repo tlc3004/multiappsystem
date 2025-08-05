@@ -2,7 +2,7 @@
   {
     "nombre": "Tumaki App",
     "url": "https://tumaki.vercel.app",
-    "logo": "/img/logo.ico"
+    "logo": "/img/sushi.ico"
   },
   {
     "nombre": "motorcycleapp",
@@ -20,8 +20,8 @@
     "logo": "/img/solutions.png"
   },
   {
-    "nombre": "appMYPEru",
+    "nombre": "tumaki web site",
     "url": "https://tumaki-web-site.vercel.app/",
-    "logo": "/img/solutions.png"
+    "logo": "/img/logo193.png"
   }
 ]
