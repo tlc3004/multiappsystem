@@ -11,8 +11,8 @@ Este proyecto está protegido bajo la licencia MIT. Puedes usar, modificar y com
 Antonio Martin León Chong – también conocido como Toño – es un desarrollador web peruano con enfoque en soluciones creativas e interfaces intuitivas. Siéntete libre de contribuir o contactar para colaborar en ideas de código con impacto.
 
 ✨ Créditos
-Creado por: **Antonio León**  
-GitHub: [@tu_usuario_github](https://github.com/tlc3004)
+Creado por: **Antonio Martín León Chong**  
+GitHub: <https://github.com/tlc3004>
 
 ---
 
