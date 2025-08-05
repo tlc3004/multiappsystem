@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { motion } from 'framer-motion';
 import Layout from './components/Layout'
 import AppCard from './components/AppCard'
-import useAppSounds from "./components/hooks/useAppSounds";
+import useAppSounds from "./hooks/useAppSounds";
 
 function App() {
   const [apps, setApps] = useState([]);
