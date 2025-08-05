@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion } from 'framer-motion';
 import Layout from "./components/Layout";
 import AppCard from "./components/AppCard";
 
@@ -31,12 +32,16 @@ function App() {
             ✖ Cerrar
           </button>
 
-          <iframe
-            key={activeApp.url}
-            src={activeApp.url}
-            title={activeApp.nombre}
-            className="w-full h-full border-none"
-          ></iframe>
+         <motion.iframe
+  key={activeApp.url}
+  initial={{ opacity: 0, scale: 0.9 }}
+  animate={{ opacity: 1, scale: 1 }}
+  exit={{ opacity: 0, scale: 0.9 }}
+  transition={{ duration: 0.4 }}
+  src={activeApp.url}
+  title={activeApp.nombre}
+  className="w-full h-full border-none"
+/>
         </div>
       )}
     </Layout>

@@ -18,5 +18,10 @@
     "nombre": "appMYPEru",
     "url": "https://app-myperu.vercel.app/",
     "logo": "/img/solutions.png"
+  },
+  {
+    "nombre": "appMYPEru",
+    "url": "https://tumaki-web-site.vercel.app/",
+    "logo": "/img/solutions.png"
   }
 ]
