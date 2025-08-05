@@ -8,7 +8,7 @@ function App() {
   const [apps, setApps] = useState([]);
   const [activeApp, setActiveApp] = useState(null);
 
-  const { playSelect, playPass } = useAppSounds(); // SE USAN LOS SONIDOS
+  const { playSlide, playPass } = useAppSounds(); // SE USAN LOS SONIDOS
 
   useEffect(() => {
     fetch("/data/apps.json")
@@ -17,7 +17,7 @@ function App() {
   }, []);
 
   const abrirApp = (app) => {
-    playSelect();
+    playSlide();
     setActiveApp(app);
   };
 
@@ -39,10 +39,10 @@ function App() {
       {activeApp && (
         <div className="relative h-[80vh] border border-white/20 rounded-lg overflow-hidden">
           <button
-            className="absolute top-2 right-2 bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-full z-10"
+            className="absolute top-1 right-4 bg-gray-300 hover:bg-red-300 text-white px-3 py-1 rounded-full z-10"
             onClick={cerrarApp}
           >
-            ✖ Cerrar
+            ⮌
           </button>
 
           <motion.iframe
