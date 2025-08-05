@@ -8,13 +8,16 @@ function App() {
   const [apps, setApps] = useState([]);
   const [activeApp, setActiveApp] = useState(null);
 
-  const { playSlide, playPass } = useAppSounds(); // SE USAN LOS SONIDOS
+  const { playSlide, playPass } = useAppSounds(); 
 
-  useEffect(() => {
-    fetch("/data/apps.json")
-      .then((res) => res.json())
-      .then((data) => setApps(data));
-  }, []);
+useEffect(() => {
+  fetch("/data/apps.json")
+    .then((res) => res.json())
+    .then((data) => {
+      console.log('Apps cargadas:', data);
+      setApps(data);
+    });
+}, []);
 
   const abrirApp = (app) => {
     playSlide();
