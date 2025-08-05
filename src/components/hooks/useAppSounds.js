@@ -1,10 +1,9 @@
 import useSound from 'use-sound';
-
 // Rutas relativas a /public/sound/
-import selectSound from '/sound/select.mp3';
-import passSound from '/sound/pass.mp3';
-import slideSound from '/sound/slide.mp3';
-import transitionSound from '/sound/transition.mp3';
+import selectSound from '/sounds/select.mp3';
+import passSound from '/sounds/pass.mp3';
+import slideSound from '/sounds/slide.mp3';
+import transitionSound from '/sounds/transition.mp3';
 
 export default function useAppSounds() {
   const [playSelect] = useSound(selectSound, { volume: 0.5 });
