@@ -23,7 +23,7 @@ Bienvenido/a a este proyecto desarrollado con pasión, código limpio y visión 
 
 ```bash
 git clone https://github.com/tlc3004.git
-cd tu-repo
+cd tlc3004
 npm install
 npm run dev
 
