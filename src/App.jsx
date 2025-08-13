@@ -10,55 +10,61 @@ function App() {
 
   const { playSlide, playPass } = useAppSounds(); 
 
-useEffect(() => {
-  fetch("/data/apps.json")
-    .then((res) => res.json())
-    .then((data) => {
-      console.log('Apps cargadas:', data);
-      setApps(data);
-    });
-}, []);
+  useEffect(() => {
+    fetch("/data/apps.json")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log('Apps cargadas:', data);
+        setApps(data);
+      });
+  }, []);
 
-  const abrirApp = (app) => {
+  const abrirApp = (app, setFullscreen) => {
     playSlide();
     setActiveApp(app);
+    setFullscreen(true); // Activa fullscreen
   };
 
-  const cerrarApp = () => {
+  const cerrarApp = (setFullscreen) => {
     playPass();
     setActiveApp(null);
+    setFullscreen(false); // Desactiva fullscreen
   };
 
   return (
     <Layout>
-      {!activeApp && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {apps.map((app, i) => (
-            <AppCard key={i} {...app} onSelect={() => abrirApp(app)} />
-          ))}
-        </div>
-      )}
+      {({ setFullscreen }) => (
+        <>
+          {!activeApp && (
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+              {apps.map((app, i) => (
+                <AppCard key={i} {...app} onSelect={() => abrirApp(app, setFullscreen)} />
+              ))}
+            </div>
+          )}
 
-      {activeApp && (
-        <div className="relative h-[80vh] border border-white/20 rounded-lg overflow-hidden">
-          <button
-            className="absolute top-1 right-4 bg-gray-300 hover:bg-red-300 text-white px-3 py-1 rounded-full z-10"
-            onClick={cerrarApp}
-          >
-            ⮌
-          </button>
+          {activeApp && (
+            <div className="fixed inset-0 z-50 bg-black">
+              <button
+                className="absolute top-3 right-4 bg-gray-700 hover:bg-red-500 px-3 py-1 rounded-full text-white z-10"
+                onClick={() => cerrarApp(setFullscreen)}
+              >
+                ⮌
+              </button>
 
-          <motion.iframe
-            key={activeApp.url}
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            transition={{ duration: 0.4 }}
-            src={activeApp.url}
-            title={activeApp.nombre}
-            className="w-full h-full border-none"
-          />
-        </div>
+              <motion.iframe
+                key={activeApp.url}
+                initial={{ opacity: 0, scale: 0.98 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.98 }}
+                transition={{ duration: 0.3 }}
+                src={activeApp.url}
+                title={activeApp.nombre}
+                className="w-screen h-screen border-none"
+              />
+            </div>
+          )}
+        </>
       )}
     </Layout>
   );
