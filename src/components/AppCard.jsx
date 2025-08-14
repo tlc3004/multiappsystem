@@ -1,3 +1,4 @@
+
 export default function AppCard({ nombre, logo, onSelect }) {
    console.log("Props recibidas por AppCard:", { nombre, onSelect, logo });
 
