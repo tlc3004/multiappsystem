@@ -28,7 +28,7 @@ function App() {
   const cerrarApp = (setFullscreen) => {
     playPass();
     setActiveApp(null);
-    setFullscreen(false); // Desactiva fullscreen
+    setFullscreen(false); 
   };
 
   return (
