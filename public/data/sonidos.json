@@ -1,42 +1,30 @@
 [
     {
     "nombre": "lazer",
-    "sonido": "/sounds/analog-lazer-fx-87122.mp3"
+    "sonido": "/sounds/lazer.mp3"
     }, 
     {
-    "nombre": "lazer",
-    "sonido": "/sounds/analog-lazer-fx-87122.mp3"
+    "nombre": "electric",
+    "sonido": "/sounds/electric.mp3"
     },
     {
-    "nombre": "lazer",
-    "sonido": "/sounds/analog-lazer-fx-87122.mp3"
+    "nombre": "arcade",
+    "sonido": "/sounds/arcade.mp3"
     },
     {
-    "nombre": "lazer",
-    "sonido": "/sounds/analog-lazer-fx-87122.mp3"
+    "nombre": "pass",
+    "sonido": "/sounds/pass.mp3"
     },
     {
-    "nombre": "lazer",
-    "sonido": "/sounds/analog-lazer-fx-87122.mp3"
+    "nombre": "select",
+    "sonido": "/sounds/select.mp3"
     },
     {
-    "nombre": "lazer",
-    "sonido": "/sounds/analog-lazer-fx-87122.mp3"
+    "nombre": "slide",
+    "sonido": "/sounds/slide.mp3"
     },
     {
-    "nombre": "lazer",
-    "sonido": "/sounds/analog-lazer-fx-87122.mp3"
-    },
-    {
-    "nombre": "lazer",
-    "sonido": "/sounds/analog-lazer-fx-87122.mp3"
-    },
-    {
-    "nombre": "lazer",
-    "sonido": "/sounds/analog-lazer-fx-87122.mp3"
-    },
-    {
-    "nombre": "lazer",
-    "sonido": "/sounds/analog-lazer-fx-87122.mp3"
-    } 
+    "nombre": "transition",
+    "sonido": "/sounds/transition.mp3"
+    }
 ]
