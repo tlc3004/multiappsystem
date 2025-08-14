@@ -22,7 +22,7 @@ function App() {
   const abrirApp = (app, setFullscreen) => {
     playSlide();
     setActiveApp(app);
-    setFullscreen(true); // Activa fullscreen
+    setFullscreen(true); 
   };
 
   const cerrarApp = (setFullscreen) => {
