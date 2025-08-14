@@ -6,9 +6,9 @@ import transitionSound from '/sounds/transition.mp3';
 
 export default function useAppSounds() {
   const [playSelect] = useSound(selectSound, { volume: 0.5 });
-  const [playPass] = useSound(passSound, { volume: 0.3 });
+  const [playPass] = useSound(passSound, { volume: 0.8 });
   const [playSlide] = useSound(slideSound, { volume: 0.5 });
-  const [playTransition] = useSound(transitionSound, { volume: 0.5 });
+  const [playTransition] = useSound(transitionSound, { volume: 0.8 });
 
   return {
     playSelect,    
