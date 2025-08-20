@@ -8,7 +8,7 @@ function App() {
   const [apps, setApps] = useState([]);
   const [activeApp, setActiveApp] = useState(null);
 
-  const { playElectric, playArcade } = useAppSounds(); 
+  const { playPass, playSelect } = useAppSounds(); 
 
   useEffect(() => {
     fetch("/data/apps.json")
@@ -20,13 +20,13 @@ function App() {
   }, []);
 
   const abrirApp = (app, setFullscreen) => {
-    playElectric();
+    playPass();
     setActiveApp(app);
     setFullscreen(true); 
   };
 
   const cerrarApp = (setFullscreen) => {
-    playArcade();
+    playSelect();
     setActiveApp(null);
     setFullscreen(false); 
   };
